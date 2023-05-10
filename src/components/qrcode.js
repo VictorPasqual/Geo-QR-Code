@@ -13,9 +13,10 @@ function obterCoordenadasAtuais() {
 
         // Gera o QR code com as coordenadas atuais
         const qrCodeData = JSON.stringify({ latitude, longitude });
+        console.log(qrCodeData)
         QRCode.toDataURL(qrCodeData, (err, url) => {
           if (err) {
-            console.error(err);
+            console.error(err); 
           } else {
             // Exibe o QR code gerado (por exemplo, em uma imagem HTML)
             const imgElement = document.createElement('img');
